@@ -1,4 +1,19 @@
-var ajaxForm = new ajaxProxy("/api/sightings")
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var curName = getParameterByName('comname').replace(/ /g,'');
+
+console.log(curName);
+
+
+var ajaxForm = new ajaxProxy("/api/sightings/" + curName);
 
 document.addEventListener("DOMContentLoaded", function(event) {
     ajaxForm.PopulateTable (jsonToTable, handleError);
@@ -27,7 +42,7 @@ function jsonToTable (data) {
         tableString += "<tr><td>" + sighting.NAME
                     + "</td><td>" + sighting.PERSON
                     + "</td><td>" + sighting.LOCATION
-                    + "</td><td>" + sighting.SIGHTED                           
+                    + "</td><td>" + sighting.SIGHTED
                     + "</td></tr>";
     }
 

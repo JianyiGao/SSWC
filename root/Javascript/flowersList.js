@@ -1,4 +1,4 @@
-var ajaxForm = new ajaxProxy("/api/flowers")
+var ajaxForm = new ajaxProxy("/api/flowers");
 
 document.addEventListener("DOMContentLoaded", function(event) {
     ajaxForm.PopulateTable (jsonToTable, handleError);
@@ -24,8 +24,11 @@ function jsonToTable (data) {
     for(var i in data) {
         var flowers = data[i];
 
-        tableString += "<tr><td>" + flowers.COMNAME
-                    + "</td></tr>";
+        let tmpId= flowers.COMNAME.replace(/ /g,'');
+
+        tableString += "<tr><td>" + flowers.COMNAME + "</td>"
+                    + "<td><a href = 'views/sightings.html?comname="+tmpId+"'><button class = 'btn btn-default'> Find Sightings</button></a></td>"
+                    + "</tr>";
     }
 
     table.append(tableString);
