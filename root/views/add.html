@@ -39,24 +39,32 @@
       <div class="container">
         <div class="jumbotron" style="background-color: #f0f4f5; padding-top: 20px">
           <div class="row">
-              <h2>List of Flowers</h2>
-              <a href = "views/add.html"><button class = "btn btn-warning"> Add New Sighting </button></a>
+              <h2>Add New Sighting</h2>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <table id="flowersTable" class="table">
-                  <thead>
-                      <th>Comon Name</th>
-                  </thead>
-                  <tbody>
-                  </tbody>
-              </table>
+              <div class="input-group">
+                <label>Flower Name</label>
+                <input type="text" class="form-control"  id = "comname">
+              </div>
+              <div class="input-group">
+                <label>Person</label>
+                <input type="text" class="form-control"  id = "person">
+              </div>
+              <div class="input-group">
+                <label>Location</label>
+                <input type="text" class="form-control"  id = "location">
+              </div>
+              <div class="input-group">
+                <label>Sighted Time</label>
+                <input type="text" class="form-control"  id = "sighted">
+              </div>
             </div>
           </div>
 
-            <!-- <div class="row">
-                <button id="refresh" type="button" class="btn btn-primary">Refresh</button>
-            </div> -->
+            <div class="row">
+                <button type="button" class="btn btn-primary" onclick = "add();" style="margin-top: 2%; margin-left: 1.3%">Submit</button>
+            </div>
 
         </div>
 
@@ -84,7 +92,7 @@
 
         <script src="/Javascript/ajaxProxy.js"></script>
         <!-- <script src="/Javascript/employeeList.js"></script> -->
-        <script src="/Javascript/flowersList.js"></script>
+        <script src="/Javascript/add.js"></script>
 
 
         <script type="javascript">

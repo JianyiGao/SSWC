@@ -39,19 +39,26 @@
       <div class="container">
         <div class="jumbotron" style="background-color: #f0f4f5; padding-top: 20px">
           <div class="row">
-              <h2>List of Flowers</h2>
-              <a href = "views/add.html"><button class = "btn btn-warning"> Add New Sighting </button></a>
+              <h2>Update Flower Info</h2>
           </div>
           <div class="row">
-            <div class="col-md-12">
-              <table id="flowersTable" class="table">
-                  <thead>
-                      <th>Comon Name</th>
-                  </thead>
-                  <tbody>
-                  </tbody>
-              </table>
+            <div class="col-md-6">
+              <div id = "current" style="color: blue; font-size: 150%; padding-top: 8%;"></div>
             </div>
+            <div class = "col-md-6">
+              <div class="input-group">
+                <label>Column Name</label>
+                <input type="text" class="form-control"  id = "column">
+              </div>
+              <div class="input-group" style = "padding-top: 1%;">
+                <label>New Info</label>
+                <input type="text" class="form-control" id = "info">
+              </div>
+              <div>
+                <button class = "btn btn-success" onclick = "update();" style = "margin-top: 2%;">Update</button>
+              </div>
+            </div>
+          </div>
           </div>
 
             <!-- <div class="row">
@@ -84,7 +91,7 @@
 
         <script src="/Javascript/ajaxProxy.js"></script>
         <!-- <script src="/Javascript/employeeList.js"></script> -->
-        <script src="/Javascript/flowersList.js"></script>
+        <script src="/Javascript/update.js"></script>
 
 
         <script type="javascript">

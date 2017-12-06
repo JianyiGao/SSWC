@@ -24,10 +24,11 @@ function jsonToTable (data) {
     for(var i in data) {
         var flowers = data[i];
 
-        let tmpId= flowers.COMNAME.replace(/ /g,'');
+        let tmpId= flowers.COMNAME;
 
-        tableString += "<tr><td>" + flowers.COMNAME + "</td>"
+        tableString += "<tr><td>" + tmpId + "</td>"
                     + "<td><a href = 'views/sightings.html?comname="+tmpId+"'><button class = 'btn btn-default'> Find Sightings</button></a></td>"
+                    + "<td><a href = 'views/update.html?comname="+tmpId+"'><button class = 'btn btn-info'> Update</button></a></td>"
                     + "</tr>";
     }
 
