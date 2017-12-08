@@ -1,5 +1,3 @@
-import { insert } from '../../insert.js';
-
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -18,13 +16,32 @@ var div = document.getElementById("current");
   div.innerHTML = "Update info for " + curName;
 
 function update(){
-  var colName = document.getElementById("column").value.toUpperCase();
-  var update = document.getElementById("info").value;
-
-
-
-  console.log('Flower info has been updated.');
+  var col = document.getElementById("column").value.toUpperCase();
+  if (col != "COMNAME" && col != "GENUS" && col != "SPECIES"){
+    alert("Column name does not exist, please enter a correct column name.");
+    return;
   }
 
+  var info = document.getElementById("info").value;
+  var req = {
+    "colName": col,
+    "update": info,
+    "comname": curName
+  };
 
+console.log(JSON.stringify(req));
+$.ajax({
+  url: "/api/flowers",
+  type: 'post',
+  data: JSON.stringify(req),
+  headers: {
+    "Content-Type": "application/json"
+  },
+  dataType: "json",
+  success: function(data){
+    console.log("Data: " + data);
+  }
+});
+
+window.location.href = "../index.html";
 }

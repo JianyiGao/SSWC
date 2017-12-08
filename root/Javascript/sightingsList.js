@@ -8,12 +8,26 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-var curName = getParameterByName('comname').replace(/ /g,'');
+var curName = getParameterByName('comname');
 
 console.log(curName);
 
+var req = {
+  "name" : curName
+};
 
-var ajaxForm = new ajaxProxy("/api/sightings/" + curName);
+console.log(JSON.stringify(req));
+
+$.ajax({
+  url: "/api/sightings",
+  type: 'get',
+  data: req,
+  success: function(data){
+    console.log("Data: " + data);
+  }
+});
+
+var ajaxForm = new ajaxProxy("/api/sightings?name=" + curName);
 
 document.addEventListener("DOMContentLoaded", function(event) {
     ajaxForm.PopulateTable (jsonToTable, handleError);
