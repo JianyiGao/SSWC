@@ -4,24 +4,24 @@ This is a real webpage for imaginary wildflower club.
 
 Made by Jianyi Gao and Zhongkai Liu.
 
+# Technology
+
+Developed with Sqlite3, NodeJS, Express, JavaScript, Jquery, HTML5, and CSS3
+
 # GIF demo
 ![alt text](Demo/Demo.gif)
 
 # Preview
-Main page:
+####Main page:
 ![alt text](Demo/flowerlist.png "Main page")
-Add a sightings:
+####Add a sightings:
 ![alt text](Demo/add_sightings.png "Add sighting")
-10 most recent sightings:
+####10 most recent sightings:
 ![alt text](Demo/topsightings.png "Top sightings")
-Update flower info:
+####Update flower info:
 ![alt text](Demo/update.png "Update")
-After update:
+####After update:
 ![alt text](Demo/afterUpdate.png "After update")
-
-# Technology
-
-Developed with NodeJS, Express, JavaScript, Jquery, HTML5, and CSS3
 
 ## License
 
