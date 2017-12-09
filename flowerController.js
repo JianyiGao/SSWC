@@ -24,6 +24,6 @@ module.exports = function(app, db, jsonParser){
         res.send(err);
       }
       res.send("Success");
-    })
-  })
+    });
+  });
 }

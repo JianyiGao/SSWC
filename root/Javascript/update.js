@@ -37,11 +37,17 @@ $.ajax({
   headers: {
     "Content-Type": "application/json"
   },
-  dataType: "json",
+  dataType: "jsonp",
   success: function(data){
     console.log("Data: " + data);
+    window.location.href = "../index.html";
+  },
+  error: function(err){
+    console.log("error: " + err);
+    window.location.href = "../index.html";
   }
 });
 
-window.location.href = "../index.html";
+
+
 }
