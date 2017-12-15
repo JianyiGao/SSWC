@@ -1,18 +1,18 @@
 {
-  "name": "simple",
+  "name": "SSWC",
   "version": "1.0.0",
-  "description": "A simple introduction to node.js",
+  "description": "SSWC Webpage",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "ess": "^4.15.2",
-    "sqlite3": "^3.1.8"
+    "sqlite3": "^3.1.8",
+    "express": "^3.10.30"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Magne Alvheim (magne (at) alvheim . com)",
-  "license": "ISC"
+  "author": "Jianyi Gao",
+  "license": "MIT"
 }

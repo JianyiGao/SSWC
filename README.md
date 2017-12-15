@@ -8,6 +8,11 @@ Made by Jianyi Gao and Zhongkai Liu.
 
 Developed with Sqlite3, NodeJS, Express, JavaScript, Jquery, HTML5, and CSS3
 
+# To start
+npm install
+node server.js
+then go to localhost:3000
+
 # GIF demo
 ![alt text](Demo/Demo.gif)
 
